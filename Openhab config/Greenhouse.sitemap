@@ -1,0 +1,22 @@
+sitemap Greenhouse label="Greenhouse"
+{
+	Frame label="Greenhouse"
+	{
+	Text item=TemperatureSensor1TemperatureItem
+	Text item=mqtt_topic_esp8266_19_GreenhouseTemp  label="Temperatuur: [%.2f °C]"
+	Text item=mqtt_topic_esp8266_19_GreenhouseRH  label="RH: [%s %%]"
+	Text item=mqtt_topic_esp8266_19_SoilPH  label="PH: [%.2f °PH ]" valuecolor=[<5.5="red",>6.5="red",>5.5="green",<6.5="green"]
+	Switch item=tradfri_0010_gwccc079e0b157_65547_power label="Pump"
+	Switch  item=chart_period label="Periode: " icon=line mappings=[0="H", 1="D", 2="W", 3="M", 4="Y"]
+	Chart   item=gClimate         period=h refresh=30000 visibility=[chart_period==0, chart_period=="Uninitialized"]
+	Chart   item=gClimate    period=D refresh=30000 visibility=[chart_period==1]
+	Chart   item=gClimate    period=W refresh=30000 visibility=[chart_period==2]
+ 	Chart   item=gClimate    period=M refresh=30000 visibility=[chart_period==3]
+	Chart   item=gClimate    period=Y refresh=30000 visibility=[chart_period==4]
+	Chart   item=mqtt_topic_esp8266_19_SoilPH         period=h refresh=30000 visibility=[chart_period==0, chart_period=="Uninitialized"]
+	Chart   item=mqtt_topic_esp8266_19_SoilPH    period=D refresh=30000 visibility=[chart_period==1]
+	Chart   item=mqtt_topic_esp8266_19_SoilPH    period=W refresh=30000 visibility=[chart_period==2]
+ 	Chart   item=mqtt_topic_esp8266_19_SoilPH    period=M refresh=30000 visibility=[chart_period==3]
+	Chart   item=mqtt_topic_esp8266_19_SoilPH    period=Y refresh=30000 visibility=[chart_period==4]
+ 	}
+}

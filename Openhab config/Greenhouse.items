@@ -1,0 +1,9 @@
+																																																																		//{ channel="mqtt:topic:broker:thing:channel"}
+Number:Temperature mqtt_topic_esp8266_19_GreenhouseTemp    		 "Greenhouse Temperature: [%.2f °C]"	  <greenhouse>		 (gSensors, gGreenhouse, gTemperatures, gClimate) {channel="mqtt:topic:esp8266_19:GreenhouseTemp"}	 //[ "CurrentTemperature" ]
+Number mqtt_topic_esp8266_19_GreenhouseRH					 "Greenhouse RH: [%d %%]"		   	 	<greenhouse>		 (gSensors, gHumidities, gClimate)		 {channel="mqtt:topic:esp8266_19:GreenhouseRH"}//[ "CurrentHumidity" ]
+Number mqtt_topic_esp8266_19_SoilPH					 "Soil PH: [%.2f °PH]"		   	 	<faucet>		 (gSensors, gPHSensors, gWaterChemistry)		 {channel="mqtt:topic:esp8266_19:SoilPH"}//[ "CurrentHumidity" ]
+
+/* Number  GH_TempSensor_25 		 "Bloom Temperature: [%.2f °C]"	<temperature>		 (gSensors, gTemperatures)		                            {mqtt="<[mqtt:/home/in/esp8266_25:state:JSONPATH($.Temperature)]"}
+Number  GH_HumiditySensor_25	 "Bloom RH : [%.1f %%]"		      <humidity>		 (gSensors, gHumidities)		                          {mqtt="<[mqtt:/home/in/esp8266_25:state:JSONPATH($.Humidity)]"}
+Number  GH_TempSensor_18    		 "SK2 Temperature: [%.1f °C]"   <temperature>		 (gSensors, gTemperatures, gOffice)  [ "CurrentTemperature" ]		{mqtt="<[mqtt:/home/in/esp8266_18/sensor:state:JSONPATH($.Temperature)]"}
+Number  GH_HumiditySensor_18		 "SK2 RH : [%.1f %%]"		        <humidity>		 (gSensors, gHumidities)    [ "CurrentHumidity" ]		  {mqtt="<[mqtt:/home/in/esp8266_18/sensor:state:JSONPATH($.Humidity)]"} */

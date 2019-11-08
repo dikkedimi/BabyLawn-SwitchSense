@@ -1,0 +1,10 @@
+ Bridge mqtt:broker:3525be49 [ host="127.0.0.1", secure=false ]
+{
+    Thing mqtt:topic:esp8266_19
+    {
+    Channels:
+        Type number : GreenhouseTemp "Greenhouse Temperature: " [ stateTopic="/esp8266_19", transformationPattern="JSONPATH:$.Temperature" ]
+        Type number : GreenhouseRH "Greenhouse Humidity: "      [ stateTopic="/esp8266_19", transformationPattern="JSONPATH:$.Humidity" ]
+        Type number : SoilPH "Soil PH: "                        [ stateTopic="/esp8266_19", transformationPattern="JSONPATH:$.PH" ]
+    }
+}
